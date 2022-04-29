@@ -25,5 +25,17 @@ public class Main {
         
         q.pushPerson(new Person("fff", "Francesco", "LaGrotta"));
         q.read();
+
+        System.out.println(q.popPerson());
+
+        q.read();
+
+        System.out.println("XXXXXXXXXXXXXXXXXXXXXX");
+        q.pushPerson(new Person("ggg", "Francesco", "Colazzo"));
+
+        System.out.println("XXXXXXXXXXXXXXXXXXXXXX");
+
+        
+        q.read();
     }
 }

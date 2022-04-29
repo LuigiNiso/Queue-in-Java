@@ -7,7 +7,7 @@ public class Queue {
     public Queue(){}
 
     public boolean pushPerson(Person p){
-        if(push > list.length){
+        if(push > list.length-1){
             if(pop == 0){
                 return false;
             }else{
@@ -24,12 +24,13 @@ public class Queue {
     }
 
     public void shift(){
-        for(int i = pop; i < list.length; i++){
-            for(int j = 0; j < list.length - pop; j++){
-                list[i] = list[j];
+        for(int i = 0; i<pop; i ++){
+            for(int j = pop; j < push; j++){
+                list[j-1] = list[j];
             }
+            pop--;
+            push--;
         }
-        push = pop;
     }
 
     public Person popPerson(){
@@ -46,5 +47,21 @@ public class Queue {
             k++;
             if(k > list.length) k = 0;
         }
+    }
+
+    public int getPush() {
+        return push;
+    }
+
+    public void setPush(int push) {
+        this.push = push;
+    }
+
+    public int getPop() {
+        return pop;
+    }
+
+    public void setPop(int pop) {
+        this.pop = pop;
     }
 }
