@@ -30,10 +30,6 @@ public class MenuManager {
   
 
   public void read(){
-    Person p = q.read();
-    while(p!=null){
-      System.out.println(p);
-      p = q.read();
-    }
+    q.read();
   }
 }

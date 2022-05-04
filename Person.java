@@ -2,7 +2,10 @@ public class Person {
     private String code;
     private String name;
     private String lastName;
+
     
+    
+    public Person() {}
     public Person(String code, String name, String lastName) {
         this.code = code;
         this.name = name;

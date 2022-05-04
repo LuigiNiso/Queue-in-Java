@@ -42,7 +42,7 @@ public class Queue {
         return list[k];
     }
 
-    public Person read(){
+    /*public Person read(){
         if(end){
             end = false;
             k = pop;
@@ -50,11 +50,21 @@ public class Queue {
         Person p = list[k];
         k++;
         if(k > list.length) k = 0;
-        if(k == push){
+        if(k > push){
             end = true;
             return null;
         }
         return p;
+    }
+    */
+
+    public void read(){
+        int k = pop;
+        while(k != push){
+            System.out.println(list[k]);
+            k++;
+            if(k > list.length) k = 0;
+        }
     }
 
     public int getPush() {
