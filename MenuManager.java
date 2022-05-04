@@ -24,8 +24,9 @@ public class MenuManager {
     return (q.pushPerson(p) == true) ? true : false;
   }
 
-  public Person del(){
-    return q.popPerson();
+  public void del(){
+    Person removed = q.popPerson();
+    System.out.println("Person removed: " + removed.getname() + " " + removed.getLastName() + " " + removed.getcode());
   }
   
 
