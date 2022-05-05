@@ -31,6 +31,8 @@ public class MenuManager {
   
 
   public void read(){
-    q.read();
+    for (Person p : q.read()) {
+      System.out.println(p);
+    }
   }
 }

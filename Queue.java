@@ -3,7 +3,7 @@ public class Queue {
     private Person list[] = new Person[MAX_PERSON];
     private int push = 0;
     private int pop = 0;
-    private int k = 0; //reader poiner
+    private int k = 0; //tmp pointers
     
     public Queue(){}
 
@@ -41,29 +41,13 @@ public class Queue {
         return list[k];
     }
 
-    /*public Person read(){
-        if(end){
-            end = false;
-            k = pop;
+    public Person[] read(){
+        Person queue[] = new Person[push];
+        for (int i = pop; i < push; i++) {
+            queue[i] = list[i];
         }
-        Person p = list[k];
-        k++;
-        if(k > list.length) k = 0;
-        if(k > push){
-            end = true;
-            return null;
-        }
-        return p;
-    }
-    */
 
-    public void read(){
-        int k = pop;
-        while(k != push){
-            System.out.println(list[k]);
-            k++;
-            if(k > list.length) k = 0;
-        }
+        return queue;
     }
 
     public int getPush() {
