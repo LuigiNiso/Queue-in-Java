@@ -21,7 +21,7 @@ public class MenuManager {
 
     Person p = new Person(code, name, lastName);
     
-    return (q.pushPerson(p) == true) ? true : false;
+    return q.pushPerson(p);
   }
 
   public void del(){
